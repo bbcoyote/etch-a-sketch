@@ -1,5 +1,39 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
-  display: flex;
   height: 100vh;
   background-color: rgb(49, 49, 49);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: aliceblue;
+  height: 480px;
+  width: 480px;
+  flex-direction: row;
+}
+
+.canvas {
+  flex: 1 1 25%;
+  height: 25%;
+}
+
+.btn-container {
+  display: flex;
+  justify-content: center;
+}
+
+.new-btn {
+  width: 160px;
+  height: 35px;
+  border-radius: 8px;
+  font-size: 22px;
+  font-weight: 700;
 }
