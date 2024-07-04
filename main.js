@@ -20,7 +20,20 @@ const setCanvas = function (grid) {
         container.appendChild(canvas);
     }
 
+
 }
+
+const mouseOverHandler = function () {
+    const canvas = document.querySelectorAll(".canvas");
+    canvas.forEach(element => element.addEventListener("mouseenter", event => {
+        event.target.style.backgroundColor = "red"
+    }))
+
+}
+
+container.addEventListener("click", () => {
+    mouseOverHandler()
+})
 
 newButton.addEventListener("click", () => {
     setCanvas()

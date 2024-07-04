@@ -20,11 +20,6 @@ body {
   flex-direction: row;
 }
 
-.canvas {
-  /* flex: 1 1 25%;
-  height: 25%; */
-}
-
 .btn-container {
   display: flex;
   justify-content: center;
