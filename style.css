@@ -21,8 +21,8 @@ body {
 }
 
 .canvas {
-  flex: 1 1 25%;
-  height: 25%;
+  /* flex: 1 1 25%;
+  height: 25%; */
 }
 
 .btn-container {
