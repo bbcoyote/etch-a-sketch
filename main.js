@@ -1,11 +1,16 @@
 const container = document.querySelector(".container");
 const btnContainer = document.querySelector(".btn-container");
+const startButton = document.createElement("button");
 const newButton = document.createElement("button");
+newButton.textContent = "restart"
+startButton.setAttribute("class", "new-btn");
 newButton.setAttribute("class", "new-btn");
-newButton.textContent = "New Page";
-btnContainer.appendChild(newButton);
+startButton.textContent = "Start";
+btnContainer.append(startButton, newButton);
 
 //how else can I get this functionality in both scopes without repeating myself?
+// apparently if I set the grid value to say 1000 it creates 2000 divs which makes my cp's fans turn up high!
+//
 const setCanvas = function (grid) {
     grid = prompt("Enter the value of grid. ex 64 would give you a grid of 64x64");
     const canvas = document.createElement('div')
@@ -18,8 +23,14 @@ const setCanvas = function (grid) {
         canvas.style.setProperty("flex", `${percent}%`)
         canvas.style.setProperty("height", `${percent}%`)
         container.appendChild(canvas);
+        console.log("2")
     }
 
+}
+
+const reset = () => {
+    const canvas = document.createElement('div')
+    canvas.remove()
 
 }
 
@@ -35,6 +46,13 @@ container.addEventListener("click", () => {
     mouseOverHandler()
 })
 
-newButton.addEventListener("click", () => {
+startButton.addEventListener("click", () => {
     setCanvas()
+})
+
+newButton.addEventListener("click", () => {
+    const canvas = document.querySelectorAll(".canvas");
+    canvas.forEach(square => {
+        square.remove()
+    })
 })
